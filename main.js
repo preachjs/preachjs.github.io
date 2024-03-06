@@ -15,6 +15,18 @@ const sideBar = {
     source: "/content/essentials",
     key: "essentials",
   },
+  aesthetics: {
+    order: 3,
+    label: "Aesthetics",
+    source: "/content/aesthetics",
+    key: "aesthetics",
+  },
+  "developer-experience": {
+    order: 4,
+    label: "Developer Experience",
+    source: "/content/developer-experience",
+    key: "developer-experience",
+  },
 };
 
 main();
@@ -35,11 +47,12 @@ async function main() {
     sidebarRoot
   );
 
+  let storedContent = new Array(Object.keys(sideBar).length);
   const promiseChain = Object.entries(sideBar)
     .sort((x, y) => x[1].order - y[1].order)
     .map(async (entry, index, source) => {
       const [key, value] = entry;
-      fetch(`${value.source}.md`).then(async (d) => {
+      return fetch(`${value.source}.md`).then(async (d) => {
         if (!d.ok) {
           return;
         }
@@ -53,16 +66,30 @@ async function main() {
         if (source.length - 1 == index) {
           layoutSpacing.push("pb-12 mb-12");
         }
-        contentRoot.innerHTML += `<section id="${key}" class="flex flex-col ${layoutSpacing
-          .filter(Boolean)
-          .join(" ")}">
-        ${await marked(content, {})}
-      </section>`;
+        storedContent.push({
+          order: value.order,
+          content: `<section id="${key}" class="flex flex-col ${layoutSpacing
+            .filter(Boolean)
+            .join(" ")}">
+          ${await marked(content, {})}
+        </section>`,
+        });
       });
     });
+
   await promiseChain.reduce((acc, item) => {
     return acc.then((_) => item);
   }, Promise.resolve());
+
+  console.log({ storedContent });
+  const usableContent = storedContent
+    // .sort((x, y) => x.order - y.order)
+    .map((x) => {
+      return x.content;
+    })
+    .join("\n");
+
+  contentRoot.innerHTML = usableContent;
 }
 
 function Sidebar({ items = [] } = {}) {
@@ -91,15 +118,15 @@ function Sidebar({ items = [] } = {}) {
 }
 
 function SidebarItem({ item, active, onPress }) {
-  return html`<li>
-    <a
-      href="#${item.key}"
-      onClick=${onPress}
-      class="text-zinc-600 hover:underline hover:text-black underline-offset-4 ${active
-        ? "underline !text-black"
-        : ""}"
-      >${item.label}</a
-    >
+  return html`<li class="w-fit">
+    <a href="#${item.key}" onClick=${onPress} class="group text-zinc-600"
+      >${item.label}
+      <span
+        class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black ${active
+          ? "max-w-full !bg-zinc-600"
+          : ""}"
+      ></span>
+    </a>
   </li>`;
 }
 
