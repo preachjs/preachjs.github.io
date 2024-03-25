@@ -48,9 +48,8 @@ async function main() {
   );
 
   let storedContent = new Array(Object.keys(sideBar).length);
-  const promiseChain = Object.entries(sideBar)
-    .sort((x, y) => x[1].order - y[1].order)
-    .map(async (entry, index, source) => {
+  const promiseChain = Object.entries(sideBar).map(
+    async (entry, index, source) => {
       const [key, value] = entry;
       return fetch(`${value.source}.md`).then(async (d) => {
         if (!d.ok) {
@@ -67,7 +66,7 @@ async function main() {
           layoutSpacing.push("pb-12 mb-12");
         }
         storedContent.push({
-          order: value.order,
+          order: value.order || Infinity,
           content: `<section id="${key}" class="flex flex-col ${layoutSpacing
             .filter(Boolean)
             .join(" ")}">
@@ -75,15 +74,15 @@ async function main() {
         </section>`,
         });
       });
-    });
+    }
+  );
 
   await promiseChain.reduce((acc, item) => {
     return acc.then((_) => item);
   }, Promise.resolve());
 
-  console.log({ storedContent });
   const usableContent = storedContent
-    // .sort((x, y) => x.order - y.order)
+    .sort((x, y) => x.order - y.order)
     .map((x) => {
       return x.content;
     })
