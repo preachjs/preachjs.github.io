@@ -27,6 +27,12 @@ const sideBar = {
     source: "/content/developer-experience",
     key: "developer-experience",
   },
+  frameworks: {
+    order: 5,
+    label: "Frameworks",
+    source: "/content/frameworks",
+    key: "frameworks",
+  },
 };
 
 main();
