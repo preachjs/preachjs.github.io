@@ -2,7 +2,7 @@
 
 ### UI
 - [@preachjs/datepicker](https://github.com/preachjs/datepicker) - Headless Datepicker(s) for preact
-- [@chakra/ui](https://v2.chakra-ui.com/) - Create accessible React apps with speed (Usable with "preact/compat")
+- [@chakra-ui/react](https://v2.chakra-ui.com/) - Create accessible React apps with speed (Usable with "preact/compat")
 
 ### Styling
 
