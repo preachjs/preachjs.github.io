@@ -8,3 +8,5 @@
 
 - [tw-in-js/twind](https://github.com/tw-in-js/twind) - The smallest, fastest, most feature complete Tailwind-in-JS solution in existence. 
 
+### Charts 
+- [plotery](https://shelacek.bitbucket.io/plotery) - 5kB declarative SVG-based charting library for Preact
