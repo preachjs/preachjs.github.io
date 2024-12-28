@@ -2,50 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PreachJS</title>
+    <title>PreachJS | Tiny preact libraries</title>
   </head>
-  <body class="!block" style="display: none">
-    <div class="mx-auto max-w-4xl p-2">
-      <header class="flex flex-col justify-center h-[400px]">
-        <h1 class="font-semibold text-2xl">PreachJS</h1>
-        <p>
-          <small>We make tiny things</small>
-        </p>
-      </header>
-      <main class="flex gap-10">
-        <aside id="sidebar" class="flex-1 text-sm"></aside>
-        <article id="article" class="flex-2 prose text-zinc-700"></article>
-      </main>
-    </div>
-
-    <script type="importmap">
-      {
-        "imports": {
-          "@twind/core": "https://ga.jspm.io/npm:@twind/core@1.1.3/core.js",
-          "@twind/preset-autoprefix": "https://ga.jspm.io/npm:@twind/preset-autoprefix@1.0.7/preset-autoprefix.js",
-          "@twind/preset-tailwind": "https://ga.jspm.io/npm:@twind/preset-tailwind@1.1.4/preset-tailwind.js",
-          "@twind/preset-typography": "https://ga.jspm.io/npm:@twind/preset-typography@1.0.7/preset-typography.js",
-          "htm": "https://ga.jspm.io/npm:htm@3.1.1/dist/htm.module.js",
-          "htm/preact": "https://ga.jspm.io/npm:htm@3.1.1/preact/index.module.js",
-          "marked": "https://ga.jspm.io/npm:marked@12.0.0/lib/marked.esm.js",
-          "preact": "https://ga.jspm.io/npm:preact@10.19.6/dist/preact.module.js",
-          "preact/hooks": "https://ga.jspm.io/npm:preact@10.19.6/hooks/dist/hooks.module.js"
-        },
-        "scopes": {
-          "https://ga.jspm.io/": {
-            "style-vendorizer": "https://ga.jspm.io/npm:style-vendorizer@2.2.3/dist/esm/bundle.min.mjs",
-            "preact": "https://ga.jspm.io/npm:preact@10.19.6/dist/preact.module.js"
-          }
-        }
-      }
-    </script>
-    <script
-      async
-      src="https://ga.jspm.io/npm:es-module-shims@1.8.3/dist/es-module-shims.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="/styles.js"></script>
-    <script type="module" src="/main.js"></script>
+  <body>
+    <div id="app"></div>
+    <script prerender type="module" src="/src/main.jsx"></script>
   </body>
 </html>
