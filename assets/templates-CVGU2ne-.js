@@ -1,4 +1,4 @@
-import{a as t,k as n}from"./main-C9588_D4.js";function r(a){const e={a:"a",h2:"h2",li:"li",ul:"ul",...a.components};return t(n,{children:[t(e.h2,{children:"Templates"}),`
+import{a as t,k as n}from"./main-CoGKwxO4.js";function r(a){const e={a:"a",h2:"h2",li:"li",ul:"ul",...a.components};return t(n,{children:[t(e.h2,{children:"Templates"}),`
 `,t(e.ul,{children:[`
 `,t(e.li,{children:[t(e.a,{href:"https://github.com/rschristian/preact-project-demos",children:"rschristian/preact-project-demos"})," - Preact Demos for various types of applications"]}),`
 `,t(e.li,{children:[t(e.a,{href:"https://github.com/Munawwar/preact-mpa-template",children:"Munawwar/preact-mpa-template"})," - Example repo to start a multi-page app/website (MPA) with Preact, express and esbuild."]}),`

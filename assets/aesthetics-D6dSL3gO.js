@@ -1,4 +1,4 @@
-import{a as t,k as c}from"./main-C9588_D4.js";function i(n){const e={a:"a",h2:"h2",h3:"h3",li:"li",ul:"ul",...n.components};return t(c,{children:[t(e.h2,{children:"Aesthetics"}),`
+import{a as t,k as c}from"./main-CoGKwxO4.js";function i(n){const e={a:"a",h2:"h2",h3:"h3",li:"li",ul:"ul",...n.components};return t(c,{children:[t(e.h2,{children:"Aesthetics"}),`
 `,t(e.h3,{children:"UI"}),`
 `,t(e.ul,{children:[`
 `,t(e.li,{children:[t(e.a,{href:"https://github.com/preachjs/datepicker",children:"@preachjs/datepicker"})," - Headless Datepicker(s) for preact"]}),`

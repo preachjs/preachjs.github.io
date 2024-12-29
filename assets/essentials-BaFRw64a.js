@@ -1,4 +1,4 @@
-import{a as e,k as i}from"./main-C9588_D4.js";function r(t){const n={a:"a",h2:"h2",h3:"h3",li:"li",ul:"ul",...t.components};return e(i,{children:[e(n.h2,{children:"Essentials"}),`
+import{a as e,k as i}from"./main-CoGKwxO4.js";function r(t){const n={a:"a",h2:"h2",h3:"h3",li:"li",ul:"ul",...t.components};return e(i,{children:[e(n.h2,{children:"Essentials"}),`
 `,e(n.h3,{children:"Routers"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:[e(n.a,{href:"https://github.com/molefrog/wouter",children:"molefrog/wouter"})," - A minimalist-friendly ~2.1KB routing for React and Preact"]}),`
