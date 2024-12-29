@@ -11,15 +11,9 @@ importers:
       preact:
         specifier: ^10.25.3
         version: 10.25.3
-      preact-async-route:
-        specifier: ^2.2.1
-        version: 2.2.1
       preact-iso:
         specifier: ^2.8.1
         version: 2.8.1(preact-render-to-string@6.5.12(preact@10.25.3))(preact@10.25.3)
-      preact-router:
-        specifier: ^4.1.2
-        version: 4.1.2(preact@10.25.3)
     devDependencies:
       '@mdx-js/mdx':
         specifier: ^3.1.0
@@ -1265,9 +1259,6 @@ packages:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==, tarball: https://registry.npmjs.org/postcss/-/postcss-8.4.49.tgz}
     engines: {node: ^10 || ^12 || >=14}
 
-  preact-async-route@2.2.1:
-    resolution: {integrity: sha512-8bg1007akXs3YDmzYT4McaTe6ji2FIzcc0/NTlu+vjJaKPNQ8lNG/HQ6LP+FoIxQ4m/KH5vvJCHJN5ADp2iNGA==, tarball: https://registry.npmjs.org/preact-async-route/-/preact-async-route-2.2.1.tgz}
-
   preact-iso@2.8.1:
     resolution: {integrity: sha512-RL0yDdJcSiB4Wnk4fBqq0OE9QCfTEW7B2ULf8GHPx72AtFE+j1NvabjBF6y3rBgrNWSuuPuuiN4L4KxYteQD2Q==, tarball: https://registry.npmjs.org/preact-iso/-/preact-iso-2.8.1.tgz}
     peerDependencies:
@@ -1276,11 +1267,6 @@ packages:
 
   preact-render-to-string@6.5.12:
     resolution: {integrity: sha512-FpU7/cRipZo4diSWQq7gZWVp+Px76CtVduJZNvQwVzynDsAIxKteMrjCCGPbM2oEasReoDffaeMCMlaur9ohIg==, tarball: https://registry.npmjs.org/preact-render-to-string/-/preact-render-to-string-6.5.12.tgz}
-    peerDependencies:
-      preact: '>=10'
-
-  preact-router@4.1.2:
-    resolution: {integrity: sha512-uICUaUFYh+XQ+6vZtQn1q+X6rSqwq+zorWOCLWPF5FAsQh3EJ+RsDQ9Ee+fjk545YWQHfUxhrBAaemfxEnMOUg==, tarball: https://registry.npmjs.org/preact-router/-/preact-router-4.1.2.tgz}
     peerDependencies:
       preact: '>=10'
 
@@ -2925,18 +2911,12 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact-async-route@2.2.1: {}
-
   preact-iso@2.8.1(preact-render-to-string@6.5.12(preact@10.25.3))(preact@10.25.3):
     dependencies:
       preact: 10.25.3
       preact-render-to-string: 6.5.12(preact@10.25.3)
 
   preact-render-to-string@6.5.12(preact@10.25.3):
-    dependencies:
-      preact: 10.25.3
-
-  preact-router@4.1.2(preact@10.25.3):
     dependencies:
       preact: 10.25.3
 

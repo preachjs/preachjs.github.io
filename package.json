@@ -10,9 +10,7 @@
   },
   "dependencies": {
     "preact": "^10.25.3",
-    "preact-async-route": "^2.2.1",
-    "preact-iso": "^2.8.1",
-    "preact-router": "^4.1.2"
+    "preact-iso": "^2.8.1"
   },
   "devDependencies": {
     "@mdx-js/mdx": "^3.1.0",
