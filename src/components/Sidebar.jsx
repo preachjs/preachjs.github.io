@@ -17,7 +17,11 @@ export function Sidebar({ items = [] } = {}) {
 function SidebarItem({ item, active }) {
   return (
     <li class="w-fit">
-      <a href={"/" + item.key} class="group text-zinc-600">
+      <a
+        href={"/" + item.key}
+        class={`group text-zinc-400 hover:text-zinc-600 ${
+          active ? "text-zinc-600"   : ""}`}
+      >
         {item.label}
         <span
           class={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black ${

@@ -1,4 +1,3 @@
-import { render } from "preact";
 import {
   ErrorBoundary,
   LocationProvider,
@@ -33,15 +32,14 @@ export const prerender = async (data) => {
     data: { url: data.url },
     head: {
       lang: "en",
-      title: "PreachJS | Tiny preact libraries",
+      title: "Docs with preact",
       elements: new Set([]),
     },
   };
 };
 
 if (typeof window !== "undefined") {
-  const mounter = import.meta.env.PROD ? hydrate : render;
-  mounter(<Main />, document.getElementById("app"));
+  hydrate(<Main />, document.getElementById("app"));
 }
 
 function mapPagesToRoutes(routes) {

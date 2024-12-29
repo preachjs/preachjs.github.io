@@ -14,8 +14,8 @@ export default function BaseLayout({ children, sideBarItems = [] }) {
             <small>We make tiny things</small>
           </p>
         </header>
-        <main class="flex gap-10">
-          <aside id="sidebar" class="flex-none text-sm">
+        <main class="flex flex-col gap-12 sm:flex-row">
+          <aside id="sidebar" class="flex-1 text-sm">
             <Sidebar
               items={Object.values(sideBarItems).sort(
                 (x, y) => x.order - y.order
@@ -23,7 +23,9 @@ export default function BaseLayout({ children, sideBarItems = [] }) {
               initialValue={Object.keys(sideBarItems)[0]}
             />
           </aside>
-          <article class="flex-1 prose text-zinc-700">{children}</article>
+          <article class="w-full md:w-[75%] prose text-zinc-700">
+            {children}
+          </article>
         </main>
       </div>
       <footer class="p-2 mx-auto max-w-4xl border-t border-t-zinc">
