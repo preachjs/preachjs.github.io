@@ -1,2 +1,0 @@
-import{a as t,k as o}from"./main-CoGKwxO4.js";function r(n){const e={a:"a",h2:"h2",p:"p",strong:"strong",...n.components};return t(o,{children:[t(e.h2,{children:"Introduction"}),`
-`,t(e.p,{children:[t(e.strong,{children:"PreachJS"})," is a world where modules and libraries come together to form the ",t(e.a,{href:"https://preactjs.com/",children:"Preact ecosystem"})]})]})}function a(n={}){const{wrapper:e}=n.components||{};return e?t(e,{...n,children:t(r,{...n})}):r(n)}export{a as default};

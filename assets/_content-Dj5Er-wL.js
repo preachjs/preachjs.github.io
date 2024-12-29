@@ -1,1 +1,0 @@
-import{u as r,a as t,k as n}from"./main-CoGKwxO4.js";import{s as o,B as u}from"./base-CYCIlw_F.js";function m(){var e;const s=r(),a=((e=o[s.params.content])==null?void 0:e.source)||(()=>t(n,{}));return t(u,{sideBarItems:o,children:t(a,{})})}export{m as default};
