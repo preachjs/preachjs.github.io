@@ -1,4 +1,4 @@
-import { hydrate, render } from "preact";
+import { render } from "preact";
 import {
   ErrorBoundary,
   LocationProvider,
@@ -6,6 +6,7 @@ import {
   Router,
   lazy,
   prerender as ssr,
+  hydrate,
 } from "preact-iso";
 import { routes } from "~routes";
 import "./index.css";

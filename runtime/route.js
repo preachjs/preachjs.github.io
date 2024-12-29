@@ -1,4 +1,4 @@
-const pages = import.meta.glob("#{__PLUGIN_PAGES_ROOT}");
+const pages = import.meta.glob("#{__PLUGIN_PAGES_ROOT}",{eager: false});
 
 export const routes = normalizeRouteImports(pages, [
   new RegExp("#{__PLUGIN_PAGES_ROOT_REGEX}"),

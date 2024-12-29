@@ -1,18 +1,18 @@
-import { lazy } from "preact-iso";
 import { sideBar } from "../content/data";
 import BaseLayout from "../layouts/base";
-import { Suspense } from "preact/compat";
 
-const AllContent = () =>
-  Object.keys(sideBar).map((d, i) => {
+const AllContent = () => {
+  const components = [];
+  let i = -1;
+  for (let d in sideBar) {
+    i++;
     const Component = sideBar[d].source;
     const classList = i > 0 ? "mt-12 pt-12" : "";
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Component class={classList} />
-      </Suspense>
-    );
-  });
+    components.push(<Component class={classList} />);
+  }
+
+  return components;
+};
 
 export default function HomePage() {
   return (
