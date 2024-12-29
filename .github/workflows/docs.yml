@@ -26,7 +26,7 @@ jobs:
       - name: Install and Build
         run: |
           pnpm i --frozen-lockfile
-          pnpm build
+          BASE_URL='https://preachjs.github.io/' pnpm build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
